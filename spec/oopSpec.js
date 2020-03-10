@@ -1,35 +1,39 @@
 let myTest = require("../src/oop_src");
 
+let person = new myTest.Person("Ryan", 30, "male", [
+  "being a hardarse",
+  "agile",
+  "ssd hard drives"
+]);
+
+
 describe("function 'hello' inside 'Person' class", function() {
-  let person = new myTest.Person("Ryan", 30, "male", [
-    "being a hardarse",
-    "agile",
-    "ssd hard drives"
-  ]);
 
-  let name = "Ryan"  
+  
   it("Should return name", function() {
-      expect(name).toEqual("Ryan");
+      expect(person.name).toEqual("Ryan");
   });
 
-  let age = 30 
+ 
   it("Should return age", function() {
-      expect(age).toEqual(30);
+      expect(person.age).toEqual(30);
   });
 
-  let gender = "male"
+ 
   it("Should return gender", function() {
-      expect(gender).toEqual("male");
+      expect(person.gender).toEqual("male");
   });
 
-  let interests = "hardarse,agile,ssd hard drives"
   it("Should return interests", function() {
-      expect(interests).toEqual("hardarse,agile,ssd hard drives");
+      expect(person.interests).toEqual(["being a hardarse", "agile", "ssd hard drives"]);
   });
   
+  describe("function 'hello' inside 'Person' class", function() {
+
   it("returns greeting", function() {
     expect(person.Hello()).toEqual(
       `Hello, my name is Ryan and i am 30 years old. I am a male My interests are being a hardarse,agile,ssd hard drives`
     );
   });
+});
 });

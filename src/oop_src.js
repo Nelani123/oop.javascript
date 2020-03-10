@@ -10,12 +10,12 @@ class Person {
     }
   }
   
-  let person = new Person("Ryan", 30, "male", [
+  var person = new Person("Ryan", 30, "male", [
     "being a hardarse",
     "agile",
     "ssd hard drives"
   ]);
-  let greeting = person.Hello()
+  var greeting = person.Hello()
   console.log(greeting);
   
   module.exports = { Person }
