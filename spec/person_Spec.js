@@ -1,4 +1,4 @@
-let myTest = require("../src/oop_src");
+let myTest = require("../src/person_src");
 
 let person = new myTest.Person("Ryan", 30, "male", [
   "being a hardarse",
@@ -8,7 +8,7 @@ let person = new myTest.Person("Ryan", 30, "male", [
 
 
 describe("function 'hello' inside 'Person' class", function() {
-
+ 
   
   it("Should return name", function() {
       expect(person.name).toEqual("Ryan");

@@ -18,5 +18,5 @@ class Person {
   var greeting = person.Hello()
   console.log(greeting);
   
-  module.exports = { Person }
+module.exports = { Person }
   
